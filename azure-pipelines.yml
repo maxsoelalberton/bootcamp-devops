@@ -27,16 +27,16 @@ steps:
     command: restore
     projects: '**/*.sln'
 
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'SONAR'
-    organization: 'promove'
-    scannerMode: 'CLI'
-    configMode: 'manual'
-    cliProjectKey: analia
-    cliProjectName: Analia
-    cliSources: '$(System.DefaultWorkingDirectory)'
-  continueOnError: true
+# - task: SonarCloudPrepare@1
+#   inputs:
+#     SonarCloud: 'SONAR'
+#     organization: 'promove'
+#     scannerMode: 'CLI'
+#     configMode: 'manual'
+#     cliProjectKey: analia
+#     cliProjectName: Analia
+#     cliSources: '$(System.DefaultWorkingDirectory)'
+#   continueOnError: true
 
 - task: DotNetCoreCLI@2
   displayName: Build
